@@ -1,0 +1,16 @@
+<form #myForm="ngForm">
+  <div>
+    <label>Text to encode:
+      <input type="text" id="inputText" name="inputText" [(ngModel)]="inputText" pattern="[A-Z .-]+" #input="ngModel" minlength="2">
+      <p [hidden]="!input.errors?.['pattern']">Invalid, only enter A-Z space dot and dash</p>
+      <p [hidden]="!input.errors?.['minlength'] || input.pristine">Invalid, too short - enter some more text</p>
+    </label>
+    <button (click)="encode()" [disabled]="input.invalid">Encode</button>
+  </div>
+  <div>
+    <label> Encoded Text:
+      <input type="text" readonly id="outputText" name="outputText" [(ngModel)]="outputText">
+    </label>
+  </div>
+</form>
+

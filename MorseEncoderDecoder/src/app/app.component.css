@@ -1,0 +1,19 @@
+li {
+  float: left;
+}
+
+
+li:not(:first-child)
+{
+  margin-left: 30px;
+}
+
+ul{
+  padding: 10px;
+  overflow: hidden;
+  list-style-type: none;
+  background-color: blueviolet;
+}
+a{
+  color:aliceblue;
+}

@@ -1,0 +1,13 @@
+<form>
+  <div>
+    <label>Encoded Text:
+      <input type="text" id="inputText" name="inputText" [(ngModel)]="inputText" #input="ngModel" required pattern="[.- ]+">
+    </label>
+    <button (click)="decode()" [disabled]="input.invalid">Decode</button>
+  </div>
+  <div>
+    <label>Decoded Text:
+      <input type="text" id="outputText" name="outputText" [(ngModel)]="outputText">
+    </label>
+  </div>
+</form>
